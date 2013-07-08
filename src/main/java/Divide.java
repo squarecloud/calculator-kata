@@ -1,11 +1,15 @@
-public class Divide implements Operator{
+public class Divide extends BinaryOperator {
+    public Divide(Calculator next) {
+        super(next);
+    }
+
     @Override
-    public int evaluate(int operand1, int operand2) {
+    protected int operate(int operand1, int operand2) {
         return operand1 / operand2;
     }
 
     @Override
-    public boolean matches(String operatorString) {
-        return operatorString.equals("/");
+    public String getOperator() {
+        return "/";
     }
 }

@@ -1,4 +1,3 @@
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -56,11 +55,11 @@ public class CalculatorTest {
         assertThat(calculator.evaluate("36 / 12")).isEqualTo(3);
     }
 
-    @Ignore
-    @Test
-    public void additionalChallenges() {
-        assertThat(calculator.evaluate("18 - 4 + 3")).isEqualTo(17);
-        assertThat(calculator.evaluate("18 - 4 * 3")).isEqualTo(6);
-        assertThat(calculator.evaluate("18 - (4 + 3)")).isEqualTo(11);
-    }
+//    @Ignore
+//    @Test
+//    public void additionalChallenges() {
+//        assertThat(calculator.evaluate("18 - 4 + 3")).isEqualTo(17);
+//        assertThat(calculator.evaluate("18 - 4 * 3")).isEqualTo(6);
+//        assertThat(calculator.evaluate("18 - (4 + 3)")).isEqualTo(11);
+//    }
 }

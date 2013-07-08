@@ -1,10 +1,10 @@
-import static com.google.common.collect.Maps.newHashMap;
-
 public class CalculatorFactory {
     public Calculator create() {
-        TokenEvaluator tokenEvaluator = new TokenEvaluator();
-        OperatorFactory operatorFactory = new OperatorFactory(new Plus(), new Minus(), new Multiply(), new Divide());
-        ExpressionEvaluator expressionEvaluator = new ExpressionEvaluator(tokenEvaluator, operatorFactory);
-        return new Calculator(expressionEvaluator);
+        Calculator integerValue = new IntegerValue(new EmptyStringIsZero());
+        Calculator add = new Add(integerValue);
+        Calculator subtract = new Subtract(add);
+        Calculator multiply = new Multiply(subtract);
+        Calculator divide = new Divide(multiply);
+        return divide;
     }
 }
