@@ -56,11 +56,20 @@ public class CalculatorTest {
         assertThat(calculator.evaluate("36 / 12")).isEqualTo(3);
     }
 
+    @Test
+    public void test_multiple_operators() {
+        assertThat(calculator.evaluate("18 - 4 + 3")).isEqualTo(17);
+    }
+
+    @Ignore
+    @Test
+    public void test_multiple_operators2() {
+        assertThat(calculator.evaluate("18 - 4 * 3")).isEqualTo(6);
+    }
+
     @Ignore
     @Test
     public void additionalChallenges() {
-        assertThat(calculator.evaluate("18 - 4 + 3")).isEqualTo(17);
-        assertThat(calculator.evaluate("18 - 4 * 3")).isEqualTo(6);
         assertThat(calculator.evaluate("18 - (4 + 3)")).isEqualTo(11);
     }
 }

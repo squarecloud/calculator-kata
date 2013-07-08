@@ -1,11 +1,11 @@
 public class Calculator {
-    private ExpressionEvaluator expressionEvaluator;
+    private ExpressionParser expressionParser;
 
-    public Calculator(ExpressionEvaluator expressionEvaluator) {
-        this.expressionEvaluator = expressionEvaluator;
+    public Calculator(ExpressionParser expressionParser) {
+        this.expressionParser = expressionParser;
     }
 
     public int evaluate(String expression) {
-             return expressionEvaluator.evaluate(expression);
+             return expressionParser.evaluate(expression);
     }
 }

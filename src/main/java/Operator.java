@@ -1,4 +1,9 @@
-public interface Operator {
-    public int evaluate(int operand1, int operand2);
-    boolean matches(String operatorString);
+public abstract class Operator implements ExpressionNode {
+    protected final ExpressionNode operand1;
+    protected final ExpressionNode operand2;
+
+    public Operator(ExpressionNode operand1, ExpressionNode operand2) {
+        this.operand1 = operand1;
+        this.operand2 = operand2;
+    }
 }

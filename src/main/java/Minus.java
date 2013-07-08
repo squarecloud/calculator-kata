@@ -1,11 +1,10 @@
-public class Minus implements Operator{
-    @Override
-    public int evaluate(int operand1, int operand2) {
-        return operand1 - operand2;
+public class Minus extends Operator {
+    public Minus(ExpressionNode operand1, ExpressionNode operand2) {
+        super(operand1, operand2);
     }
 
     @Override
-    public boolean matches(String operatorString) {
-        return operatorString.equals("-");
+    public int evaluate() {
+        return operand1.evaluate() - operand2.evaluate();
     }
 }
